@@ -37,7 +37,7 @@ jobs:
           pdflatex -interaction=nonstopmode -synctex=1 cv.tex
 
       - name: Upload PDF as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cv-pdf
           path: cv.pdf
