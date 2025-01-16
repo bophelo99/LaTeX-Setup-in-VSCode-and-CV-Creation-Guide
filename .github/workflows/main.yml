@@ -34,10 +34,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Compile LaTeX Document
         run: |
-          pdflatex -interaction=nonstopmode -synctex=1 cv.tex
+          pdflatex -interaction=nonstopmode -synctex=1 CV.tex
 
       - name: Upload PDF as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cv-pdf
-          path: cv.pdf
+          name: CV-pdf
+          path: CV.pdf
