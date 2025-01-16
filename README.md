@@ -161,4 +161,8 @@ LaTeX Workshop: Build LaTeX Project
 
 If there are errors, check the **OUTPUT** panel (`Ctrl + Shift + U`) for logs.
 
-
+  `OR`
+Try running:
+```sh
+latexmk -pdf cv.tex
+```
