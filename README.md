@@ -1,6 +1,14 @@
 # LaTeX Setup and CV Creation Guide
 
+## 📌 Introduction
+This guide will help you:
+- Set up LaTeX in VS Code
+- Fix common errors (like latexmk not found, Docker issues, etc.)
+- Create a professional CV using LaTeX
+
 This guide walks you through the process of setting up **LaTeX** in **Visual Studio Code (VS Code)**, fixing common errors, and creating a **CV** using LaTeX.
+
+---
 
 ## 🚀 Prerequisites
 
@@ -28,12 +36,44 @@ Before starting, ensure you have the following installed:
 - Open **VS Code** and go to the Extensions tab (left sidebar).
 - Search for **LaTeX Workshop** and click **Install**.
 
+### 5. Uodate Miktek or it will give errors
+- Open **MiKTeX Console on Windows** → Go to **Updates** → Install all updates.
+- Next, Open **Command Prompt (cmd)** and verify installation:
+   ```sh
+   where latexmk
+   ```
+   It should return a path like:
+   
+   C:\Users\YourName\AppData\Local\Programs\MiKTeX\miktex\bin\x64\latexmk.exe
+
 ---
+## 🔧 Setting Up VS Code
+
+### Configure `latexmk` in VS Code
+1. Open VS Code **Settings** (`Ctrl + ,`)
+2. Search for `latex-workshop.latex.tools`
+3. Click **Edit in settings.json** and add:
+   ```json
+   "latex-workshop.latex.tools": [
+      {
+         "name": "latexmk",
+         "command": "C:/Users/YourName/AppData/Local/Programs/MiKTeX/miktex/bin/x64/latexmk.exe",
+         "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "%DOC%"
+         ]
+      }
+   ]
+   ```
+   Here replace path with your own path from when you run "where latexmk" command
 
 ## ⚙️ Fixing LaTeX Workshop Errors
 
 ### **Error: "spawn latexmk ENOENT"**
-This error means LaTeX Workshop can't find `latexmk`. Follow these steps to resolve:
+If this error occurs when you r\run your .tex file, it means LaTeX Workshop can't find `latexmk`. Follow these steps to resolve:
 
 1. **Verify `latexmk` Installation**:
    - Open Command Prompt and run:
@@ -51,8 +91,9 @@ This error means LaTeX Workshop can't find `latexmk`. Follow these steps to reso
 
 3. **Restart Your Computer** after making changes.
 
+
 ### **Error: "docker' is not recognized as an internal or external command"**
-Disable Docker in LaTeX Workshop:
+If the this error occurs, you need to Disable Docker in LaTeX Workshop:
 
 1. Go to **VS Code Settings** (`Ctrl + ,`).
 2. Search for `latex-workshop.docker.enabled` and set it to **false**.
@@ -66,7 +107,8 @@ Disable Docker in LaTeX Workshop:
 - Create a new `.tex` file (e.g., `cv.tex`).
 
 ### 2. Add LaTeX Code for CV
-
+- Copy and paste contents of my repo file `CV.tex` into your `.tex` file  and edit with your information\
+                  `or`\
 Here is an example LaTeX code for creating a simple CV:
 
 ```latex
@@ -105,3 +147,18 @@ Here is an example LaTeX code for creating a simple CV:
 \end{itemize}
 
 \end{document}
+```
+## 🔄 3. Compiling LaTeX Documents
+
+To compile a `.tex` file:
+
+1. Open your `.tex` file in VS Code
+2. Press **`Ctrl + Shift + P`** and search:    
+```
+LaTeX Workshop: Build LaTeX Project
+```
+3. Select it and wait for the PDF to be generated.
+
+If there are errors, check the **OUTPUT** panel (`Ctrl + Shift + U`) for logs.
+
+
