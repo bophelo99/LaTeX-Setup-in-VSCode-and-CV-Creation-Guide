@@ -17,13 +17,30 @@
 \usepackage{pict2e}
 \usepackage{wasysym}
 \usepackage[english]{babel}
-\usepackage{tikz}
 \usepackage{setspace}
+\usepackage{graphicx} % For including images
+\usepackage{wrapfig}  % For wrapping text around the image
+\usepackage{tikz}     % For drawing shapes (circle crop)
+\usepackage{adjustbox} % For scaling and positioning images
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=red, citecolor=green]{hyperref}
 \pagestyle{empty}
 \linespread{0}
 \usepackage[margin=5mm, paperwidth=612pt,paperheight=792pt]{geometry}
 \begin{document}
+
+% Profile photo in the top-left corner
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north west, xshift=0.5cm, yshift=-0.5cm] (profilepic) at (current page.north west) 
+  {
+      \adjustbox{clip, trim=0 0 0 0}{%
+      \begin{tikzpicture}
+          \clip (1.5,1.5) circle(1cm);
+          \node at (0.8,3) {\includegraphics[width=3cm, height=3cm, keepaspectratio]{Profile.jpeg}};
+      \end{tikzpicture}
+      }
+  };
+\end{tikzpicture}
+
 \definecolor{color_29791}{rgb}{0,0,0}
 \begin{center}\textbf{\fontsize{24.7871}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}BOPHILO CHARLES NTSEMI}\end{center} \vspace{-8mm}
 \begin{center}\textbf{\fontsize{12}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}\href{https://maps.app.goo.gl/37mATUypvoUqSagP9}{\underline{71 jamie Uys Str, Vorna Valley, Midrand, 1686}}}\end{center} \vspace{-8mm}
@@ -54,12 +71,11 @@
 \\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Programming :} Python3, JavaScript(ES6), C++, HTML5, CSS3, SQL, Assembly, Git, Powershell, Windows Cmd, VS Code, LaTeX}
 \\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Web Technologies :} IBM, Azure, Agile SDLC, CI/CD, Scrum, GitHub, WebSockets,}
 \\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Design Tools :} Figma, Adobe, Flutter, Jira,}
-\\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Database technoligies :} }
-\\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Front End :} knowledge of Developing with front-end development languages and tools such as HTML5, CSS3, JavaScript(ES6+), React and Bootstrap}
+\\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Front End :} \parbox{\textwidth}{\raggedright knowledge of Developing with front-end development languages and tools such as HTML5, CSS3, JavaScript(ES6+), React \\ and Bootstrap}}
 \\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Back End :} basic skilled with Programming applications using back-end languages and frameworks: Express, Node.js, Python3, and Django}
 \\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Engineering :} LTSpice, MATLAB, FEMM, Oscilloscope, PLC Arduino Programming,}
 \\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Technologies/Frameworks :} Docker, Kubernetes, GitHub Actions, Windows OS Linux, Ubuntu,}
-\\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Computer :} MS Word, Excel, PowerPoint, Access, Outlook, Visio, Project, Jira,}
+\\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Computer :} basic skills of working with MS Word, Excel, PowerPoint, Access, Outlook, Visio, Project, Jira,}
 
 \vspace{-3mm}\section*{\fontsize{14}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Experience}\vspace{-9pt} 
 \rule{\textwidth}{0.4pt}
@@ -84,5 +100,37 @@
   \vspace{-3mm}
   \item \textbf{Health and Safety Compliance:} conducted routine inspections of tools and equipment, and participated in meetings to address technical issues and implement corrective actions for production challenges.
 \end{itemize}
+
+\vspace{-5mm}\section*{\fontsize{14}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Training and Competency Courses}\vspace{-9pt} 
+\rule{\textwidth}{0.4pt}
+\vspace{2pt}
+\\\textbf{IBM} - Full Stack Software Development, (Feb, 2024 - July, 2024)
+\vspace{-3mm}
+\begin{itemize}
+  \item Trained in \href{https://drive.google.com/file/d/1i5SDy8WoBzwGOmAEAcxJzVyCb1c7Gfqq/view?usp=sharing}{\underline{hazard identification, risk assessment, and safety protocols}}
+  \vspace{-3mm}
+  \item Collaborated with fellow engineering interns to design network systems, select transformer sizes, perform three-phase network analysis, and conduct fault level calculations for residential power distribution projects.
+  \vspace{-3mm}
+  \item Assisted technicians in installing industrial motors, air conditioning systems, switchgear components, and programmable remote controls.
+\end{itemize}
+
+\vspace{0mm}\section*{\fontsize{14}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}References}\vspace{-9pt} 
+\rule{\textwidth}{0.4pt}
+\vspace{2pt}\\
+\begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.3\textwidth}}
+  % Column 1
+  \textbf{Mashavhela T.J} & 
+  \textbf{Phila Nzimande} & 
+  \textbf{Nkululeko Ngwenya} \\
+  High School principal & 
+  HR admin& 
+  Supervisor\\
+  Tshimbupfe Secondary & 
+  Hlogirati Pty Ltd& 
+  CZ Electronics Pty Ltd\\ 
+  Phone: +27-82-763-8685  & 
+  Phone: +27-81-051-4337 & 
+  Phone: +27-84-304-1242 \\
+\end{tabular}
 
 \end{document}
