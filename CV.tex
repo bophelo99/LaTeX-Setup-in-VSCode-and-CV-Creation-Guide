@@ -30,11 +30,11 @@
 
 % Profile photo in the top-left corner
 \begin{tikzpicture}[remember picture, overlay]
-  \node[anchor=north west, xshift=0.5cm, yshift=-0.5cm] (profilepic) at (current page.north west) 
+  \node[anchor=north west, xshift=3.5cm, yshift=0cm] (profilepic) at (current page.north west) 
   {
       \adjustbox{clip, trim=0 0 0 0}{%
       \begin{tikzpicture}
-          \clip (1.5,1.5) circle(1cm);
+          \clip (1.5,1.5) circle(0.6cm);
           \node at (0.8,3) {\includegraphics[width=3cm, height=3cm, keepaspectratio]{Profile.jpeg}};
       \end{tikzpicture}
       }
@@ -42,7 +42,7 @@
 \end{tikzpicture}
 
 \definecolor{color_29791}{rgb}{0,0,0}
-\begin{center}\textbf{\fontsize{24.7871}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}BOPHILO CHARLES NTSEMI}\end{center} \vspace{-8mm}
+\vspace{-30pt}\begin{center}\textbf{\fontsize{24.7871}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}BOPHILO CHARLES NTSEMI}\end{center} \vspace{-8mm}
 \begin{center}\textbf{\fontsize{12}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}\href{https://maps.app.goo.gl/37mATUypvoUqSagP9}{\underline{71 jamie Uys Str, Vorna Valley, Midrand, 1686}}}\end{center} \vspace{-8mm}
 \begin{center}\begin{tabbing}
 \hspace{1.8in} \= \hspace{2.5in} \= \hspace{2in} \= \kill
@@ -52,7 +52,7 @@
 \vspace{-5mm} \section*{\fontsize{14}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Education}\vspace{-10pt} 
 \rule{\textwidth}{0.4pt}
 \vspace{2pt}
-{\textbf{\textit{\fontsize{12}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}University of the Witwatersrand, , Johannesburg, RSA – Incomplete (FinalYear)}}}\\
+{\textbf{\textit{\fontsize{12}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}University of the Witwatersrand, , Johannesburg, RSA – Incomplete (FinalYear)} %
 \fontsize{10}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}NFQ level 8 - Bachelor of Science in Electrical Engineering\\
 {{\fontsize{10}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{10mm}• Majors:}}
 \parbox{\textwidth}{\raggedright
@@ -69,7 +69,7 @@
 \rule{\textwidth}{0.4pt}
 \vspace{2pt}
 \\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Programming :} Python3, JavaScript(ES6), C++, HTML5, CSS3, SQL, Assembly, Git, Powershell, Windows Cmd, VS Code, LaTeX}
-\\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Web Technologies :} IBM, Azure, Agile SDLC, CI/CD, Scrum, GitHub, WebSockets,}
+\\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Web Technologies :} IBM, deploying Apps on Azure, Agile SDLC, CI/CD, Scrum, GitHub, WebSockets,}
 \\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Design Tools :} Figma, Adobe, Flutter, Jira,}
 \\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Front End :} \parbox{\textwidth}{\raggedright knowledge of Developing with front-end development languages and tools such as HTML5, CSS3, JavaScript(ES6+), React \\ and Bootstrap}}
 \\{\fontsize{9}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}\hspace{5mm}\textbf{Back End :} basic skilled with Programming applications using back-end languages and frameworks: Express, Node.js, Python3, and Django}
@@ -104,17 +104,40 @@
 \vspace{-5mm}\section*{\fontsize{14}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Training and Competency Courses}\vspace{-9pt} 
 \rule{\textwidth}{0.4pt}
 \vspace{2pt}
-\\\textbf{IBM} - Full Stack Software Development, (Feb, 2024 - July, 2024)
+\\\textbf{IBM - \href{https://coursera.org/share/a352ad6b5eef1f6443a48a21e561add4}{\underline{Full Stack Software }}, (Feb, 2024 - July, 2024)}
 \vspace{-3mm}
 \begin{itemize}
-  \item Trained in \href{https://drive.google.com/file/d/1i5SDy8WoBzwGOmAEAcxJzVyCb1c7Gfqq/view?usp=sharing}{\underline{hazard identification, risk assessment, and safety protocols}}
+  \item Learning to build cloud native applications using \href{https://coursera.org/share/5705b6b914c0600090105451c32dd8d0}{\underline{Docker, Kubernetes, OpenShift, and Istio.}}
   \vspace{-3mm}
-  \item Collaborated with fellow engineering interns to design network systems, select transformer sizes, perform three-phase network analysis, and conduct fault level calculations for residential power distribution projects.
+  \item Using \href{https://coursera.org/share/069696f4c4cbb78e2c12acb663c4a1ee}{\underline{Django ORM to build object-oriented RDMS using IBM Db2}}, and compose SQL queries to insert, select, update, and delete data
   \vspace{-3mm}
-  \item Assisted technicians in installing industrial motors, air conditioning systems, switchgear components, and programmable remote controls.
+  \item Creating, and deploying \href{https://coursera.org/share/dea435400069b14cf6579a09dce472ac}{\underline{microservices applications}} using Docker containers and serverless technology IBM Code Engine.
+  \vspace{-3mm}
+  \item Learn creating REST API endpoints and invoke them using cURL and Postman; Use SwaggerUI to document and test APIs.
+   \vspace{-3mm}
+  \item learning to create and deploy AI-based applications onto a web server using IBM Watson AI Libraries and Flask.
+  \vspace{-3mm}
+  \item Creating Python modules, run unit tests, and package applications while ensuring the PEP8 coding best practices using Pylint.
+  \vspace{-3mm}
+  \item Creating server-side applications using Node.js and Express frameworks.
+  \vspace{-3mm}
+  \item learning to develop interactive user interfaces (UIs) and web applications using JavaScript technologies including React, JSX, and ES6.
 \end{itemize}
 
-\vspace{0mm}\section*{\fontsize{14}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}References}\vspace{-9pt} 
+\hspace{-7mm}\textbf{Artificial Intelligence Augmented Professional Development Skills, (02-05-2024 - 07-14-2024)}
+\vspace{-3mm}
+\begin{itemize}
+  \item Learn to use AI tools like Adobe and Runaway to design presentations, generate graphics, and enhance engagement through creative solutions
+  \vspace{-3mm}
+  \item Computer Proficiency: learn intermediate skills in Excel, Outlook, PowerPoint, and managing emails effectively.
+  \vspace{-3mm}
+  \item learn about leveraging AI to streamline workflows, improve collaboration, and automate routine tasks.
+  \vspace{-3mm}
+  \item learn about enhancing collaboration and leadership skills through AI-assisted project management and team coordination
+  \vspace{-3mm}
+\end{itemize}
+
+\vspace{-3mm}\section*{\fontsize{14}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}References}\vspace{-9pt} 
 \rule{\textwidth}{0.4pt}
 \vspace{2pt}\\
 \begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.3\textwidth}}
